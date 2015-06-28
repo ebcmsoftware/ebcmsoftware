@@ -2,10 +2,19 @@ import webapp2
 import os
 from google.appengine.ext.webapp import template
 
+import jinja2
+
+
+JINJA_ENVIRONMENT = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
+
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        path = os.path.join(os.path.dirname(__file__), 'index.html')
-        self.response.out.write(template.render(path, {}))
+        template = JINJA_ENVIRONMENT.get_template('index.html')
+        self.response.write(template.render({}))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

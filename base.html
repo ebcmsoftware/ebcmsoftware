@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EBCM Software</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+{% block head %}
+{% endblock %}
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header2" class="header"> 
+    <div id="title"><span style="vertical-align:middle;">EBCM Software</span></div>
+</div>
+
+<div id="container">
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+    <a href="http://ebcmsoftware.com">&copy; EBCM Software 2015</a> | 
+    <a href = "http://ebcmsoftware.com/donate/"> Donate </a>
+</footer>
+
+</body>
+</html>
+

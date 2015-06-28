@@ -1,27 +1,3 @@
-#phonemessage{
-  display: none;
-}
-
-/*ANIMATIONS*/
-.gameButton:hover {
-    /*-webkit-animation: highlight .5s; */
-    /*animation: highlight .5s;*/
-        border-color: #1A4E95;
-    text-decoration: none;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes highlight {
-    from {border-width:2px;}
-    to {border-width:3px;}
-}
-
-/* Standard syntax */
-@keyframes highlight {
-    from {border-width:2px;}
-    to {border-width:3px;}
-}
-
 /*GENERAL RULES*/
 td{
 	padding-left: 10px;
@@ -33,60 +9,7 @@ table h1{
 	margin-bottom: 10px;
 }
 
-.gameButton{
-	vertical-align: middle;
-	font-size: 3em;
-	border: 2px solid #3698D9;
-	margin: 0 auto;
-  min-width: 15%;
-  overflow:hidden;
-	padding: 10px;
-	border-radius: 0px;
-	white-space: nowrap;
-	cursor: pointer;
-  background-color: #EEF2F3;
-  color: black;
-}
-
-.TQnum{
-    font-family: 'Source Sans Pro';
-}
-.newrecord{
-    -webkit-animation: glow 1.0s infinite alternate;
-    animation: glow 1.0s infinite alternate;
-    color:#24AD62;
-    color:yellow;
-    display:inline; /*defaults to display none so it can be shown when it actually is a record*/
-}
-
-@-webkit-keyframes glow {
-    to {
-        text-shadow: 0 0 6px white;
-    }
-}
-
-@keyframes glow{
-	to {
-        text-shadow: 0 0 6px white;
-    }
-}
-
-#strikes{
-    font-size: 4em;
-}
-
-.strike{
-    font-size:1.5em;
-    color: #E74B3D;
-}
-
-.good{
-    font-size:1.5em;
-    text-shadow: 0 0 1px black;
-    color:#24AD62;
-}
-
-html, body{
+html, body {
 	height: 100%;
 }
 
@@ -104,198 +27,80 @@ body{
 	user-select: none;
 }
 
-a{
-	text-decoration: none;
+a {
+	/* text-decoration: none; */
 	color: #EEF2F3;
 }
 
-a:hover{
+a:hover {
 	text-decoration: underline;
 	color: #EEF2F3;
 }
 
-h3{
+h3 {
 	text-align:center;
 	padding-bottom: 5px;
 }
 
-div{
+div {
 	padding: 10px 0% 10px 0%;
 	border-radius: 3px;
 }
 
-hr{
-	/*border-color: #EEF2F3;*/
+html, body, #container
+{
+    margin: 0;
+    padding: 0;
+}
+
+#container
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#content {
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0 0 25px 0;
+    overflow: hidden;
 }
 
 /* HEADER */
-#header2,
-#header{
-  cursor:pointer; 
-	text-align: center;
-	color: black;
-	margin: 0 auto;
-	padding: 0;
-	font-size: 4em;
-	background-color: #EEF2F3;
-}
-
-#smallheadtext{
-	font-size: 65%;
-}
-
-#title{
-	padding: 5px;
-}
-
-#charlieoptionbox{
-	width:10px;
-	height: 10px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
-/*game control UI*/
-#gamecontrols{
-	width: 90%;
-  max-width:2000px;
-	margin: 0 auto;
-  color: white;
-	font-weight: bold;
-}
-
-#score{
-  cursor:default;
-	vertical-align: middle;
-	font-size: 3.5em;
-	float: left;
-}
-
-#timercontainer{
-  width: 60%;
+#header2 {
+    cursor:pointer; 
+    text-align: center;
+    color: black;
     margin: 0 auto;
-    float: top;
-}
-
-#timer{
-	width: 100%;
-    height: 25px;
-	background-color: #24AD62;
-	text-align: center;
-	vertical-align: middle;
-	font-size: 2em;
-	margin: 0px auto;
-  	padding: 0px;
-}
-
-#pausebutton {
-	float: right;
-  text-align: right;
-  font-size: 3em;
-  cursor: pointer;
-}
-
-#pausebutton:hover{
-  border-width: 3px;
-    border-color: #1A4E95;
-}
-
-#pausemodal{
-  color: #5B6C7C;
-  opacity: 0;
-  height: 100%;
-}
-
-/*left or right buttons */
-#LRcontainer{
-  width: 90%;
-  max-width:2000px;
-  margin: 0 auto;
-}
-
-#leftanswer {
-	float: left;
-  text-align: left;
-}
-
-#rightanswer{
-	float: right;
-  text-align: left;
-}
-
-#strikes{
-  cursor:default;
-	margin: 0 auto;
-	text-align: center;
-}
-
-/*the graph and title */
-#chartcontainer{
-  cursor:default;
-  /*border: 5px solid black;*/
-  margin-bottom: 15px;
-	height: 60%;
-	width: 90%;
-  max-width:2000px;
-	margin: 0 auto;
-	display: block;
-  background-color: #FFFFFF;
-	color: #FFFFFF;
-}
-
-#pausetext{
-  text-shadow: 0 0 20px black;
-  cursor:default;
-  white-space:nowrap;
-  text-align:center;
-  position:absolute; 
-  width:510px;
-  margin:0 auto;
-  z-index:1000005;
-  color:#c0392b; 
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
-  bottom:50%;
-  display: none;
-  font-size:6em; /* 600% */
-}
-
-#popuptext{
-  cursor:default;
-  white-space:nowrap;
-  z-index:100;
-  color:#24AD62;
-  display: none;
-  font-size:6em; /* 600% */
-
-  //position:relative; /*for when it's tied to chartcontainer*/
-  position:absolute;
-  //margin: auto;
-  left: 0;
-  right: 0;
-  top: 35%; /* am i happy with this? no of course not. does it work? on some screens. */
-  bottom:0;
-  text-align: center;
-}
-
-#points{
-  font-weight: bold;
+    padding: 0;
+    font-size: 4em;
+    background-color: #EEF2F3;
 }
 
 /*copyright and info, always @ the v. bottom*/
 #footer{
-	text-align: center;
-	width: 100%;
-	font-size : 1.5em;
+  text-align: center;
+  width: 100%;
+  font-size : 1.5em;
   padding-top: 5px;
-	padding-bottom: 5px;
+  padding-bottom: 5px;
   position:fixed;
   bottom:0px;
   background-color: #3698D9;
   border-top: 2px solid #EEF2F3;
+}
+
+#footer
+{
+    clear: both;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
 /* START SCREEN STUFF*/
