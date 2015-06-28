@@ -1,14 +1,12 @@
 import webapp2
-
-class Hello(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hi.')
+import os
+from google.appengine.ext.webapp import template
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Bye world :((((((((')
+        path = os.path.join(os.path.dirname(__file__), 'index.html')
+        self.response.out.write(template.render(path, {}))
 
 app = webapp2.WSGIApplication([
-    ('/hello', Hello),
     ('/', MainHandler)
 ], debug=True)
